@@ -1,0 +1,30 @@
+[
+  {
+    "type": "container",
+    "title": "Metasploit Armitage",
+    "description": "Offensive toolingS",
+    "categories": ["offensive"],
+    "platform": "linux",
+    "logo": "https://i.imgur.com/SRKQlbq.png",
+    "registry": "gitlab",
+    "image": "ktx/msfrpcd:latest",
+    "env": [
+      {
+        "name": "POSTGRES_DB_HOST",
+        "label": "Postgres database host",
+        "type": "container"
+      },
+      {
+        "name": "POSTGRES_DB_PASSWORD",
+        "label": "Database password",
+        "set": "s3cr3t"
+      }
+    ],
+    "ports": [
+      "55553/tcp", "80/tcp", "443/tcp"
+    ],
+    {
+  "network": "haknet"
+    }
+  }
+]

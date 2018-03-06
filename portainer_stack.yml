@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+  msfrpcd:
+    build:
+      context: .
+      args:
+        - RHOST=163.172.173.193
+        - RPASS=s3cr3t
+    image: msfrpcd
+    networks:
+      - haknet
+    ports:
+      - 80:80
+      - 443:443
+      - 55553:55553
+
+  msfdb:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=s3cr3t
+    networks:
+      haknet:
+        aliases:
+          - database
+
+networks:
+  haknet:
