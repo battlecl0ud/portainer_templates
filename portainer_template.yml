@@ -10,7 +10,7 @@
     "network":     "haknet",
     "logo":        "https://i.imgur.com/SRKQlbq.png",
     "image":       "msfrpcd:latest",
-    "ports":       ["55553:55553/tcp", "55555:55555/tcp", "443:443/tcp"],
+    "ports":       ["55553/tcp", "55555/tcp", "443/tcp"],
     "env":         [
     {
       "name":      "POSTGRES_DB_HOST",
@@ -48,7 +48,7 @@
       }
     ],
     "ports":       [
-      "5432":"5432"
+      "5432"
     ],
     "volumes":     ["/var/lib/postgresql/data"]
 }
