@@ -6,11 +6,9 @@
   "image": "empireproject/empire",
   "categories": "C2",
   "network": "haknet",
-
   "ports": [
     "80/tcp",
     "443/tcp"
   ]
-
 }
 ]
