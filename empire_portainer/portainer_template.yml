@@ -5,9 +5,5 @@
   "logo": "https://i.imgur.com/BF2ky8G.png",
   "image": "empireproject/empire",
   "categories": "C2",
-  "network": "haknet",
-  "ports": [
-    "80/tcp",
-    "443/tcp"
-  ]
+  "network": "haknet"
 }
