@@ -1,9 +1,16 @@
-{
+[{
   "type": "container",
   "title": "empire",
-  "description": "Empire is a PowerShell and Python",
+  "description": "Empire is a PowerShell and Python post-exploitation agent.",
   "logo": "https://i.imgur.com/BF2ky8G.png",
   "image": "empireproject/empire",
   "categories": "C2",
-  "network": "haknet"
+  "network": "haknet",
+
+  "ports": [
+    "80/tcp",
+    "443/tcp"
+  ]
+
 }
+]
