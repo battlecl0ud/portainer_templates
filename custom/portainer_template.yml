@@ -1,0 +1,55 @@
+[
+  {
+    "type":        "container",
+    "name":        "msfrpc",
+    "title":       "Metasploit Armitage",
+    "description": "Offensive tooling",
+    "note":        "Deploys the Metasploit framework RPC Daemon using Kali a base, and launches Armitage team server. Make sure to run the PostgresSQL backend server from templates first.",
+    "categories":  ["C2"],
+    "platform":    "linux",
+    "network":     "haknet",
+    "logo":        "https://i.imgur.com/SRKQlbq.png",
+    "image":       "msfrpcd:latest",
+    "ports":       ["55553/tcp", "55555/tcp", "443/tcp"],
+    "env":         [
+    {
+      "name":      "POSTGRES_DB_HOST",
+      "label":     "POSTRESGSQL database host",
+      "type":      "container"
+    },
+    {
+      "name":      "POSTGRES_DB_PASSWORD",
+      "label":     "Database password",
+      "set":       "s3cr3t"
+    }
+    ]
+  },
+  {
+    "type":        "container",
+    "name":        "msfdb",
+    "note":        "<h1>Make sure to name your container msfdb",
+    "title":       "PostgreSQL",
+    "description": "Preconfigured for Metasploit",
+    "categories":  ["database"],
+    "platform":    "linux",
+    "logo":        "https://i.imgur.com/3lVNxIK.png",
+    "network":     "haknet",
+    "image":       "postgres:latest",
+    "env":         [
+      {
+        "name":    "POSTGRES_USER",
+        "label":   "Superuser",
+        "set":     "postgres"
+      },
+      {
+        "name":    "POSTGRES_PASSWORD",
+        "label":   "Superuser password, default for Metasploit Preconfigured",
+        "set":     "s3cr3t"
+      }
+    ],
+    "ports":       [
+      "5432"
+    ],
+    "volumes":     ["/var/lib/postgresql/data"]
+}
+]

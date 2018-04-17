@@ -1,0 +1,20 @@
+[
+  {
+    "type":        "container",
+    "name":        "trevorc2_server",
+    "title":       "trevorc2_server",
+    "description": "TrevorC2 is a legitimate website (browsable) that tunnels client/server communications for covert command execution",
+    "note":        "Auto generated Portainer template <br>Source openssl ca-certificates py3-requests py3-pip build-dependencies python3-dev build-base wget",
+    "categories":  ["offensive"],
+    "platform":    "linux",
+    "network":     "haknet",
+    "logo":        "https://i.imgur.com/ZOuTP9V.png",
+    "image":       "battlecl0ud/trevorc2_server:latest",
+    "ports":       ["80/tcp", "443/tcp"],
+    "env":         [ {
+      "name":      "USER_INPUT",
+      "label":     "Arguments"
+        }
+    ]
+  }
+]
