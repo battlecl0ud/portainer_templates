@@ -1,162 +1,152 @@
 [
-  [
-    {
-      "type": "container",
-      "name": "meg",
-      "title": "meg",
-      "description": "",
-      "note": "Auto generated Portainer template <br>Source https://github.com/tomnomnom/meg",
-      "categories": [
-        "offensive"
-      ],
-      "platform": "linux",
-      "network": "haknet",
-      "logo": "https://i.imgur.com/ZOuTP9V.png",
-      "image": "battlecl0ud/meg:latest",
-      "ports": [],
-      "env": [
-        {
-          "name": "USER_INPUT",
-          "label": "Arguments"
-        }
-      ]
-    }
-  ],
-  [
-    {
-      "type": "container",
-      "name": "sqlmap",
-      "title": "sqlmap",
-      "description": "Automatic SQL injection and database takeover tool",
-      "note": "Auto generated Portainer template <br>Source https://github.com/sqlmapproject/sqlmap.git",
-      "categories": [
-        "offensive"
-      ],
-      "platform": "linux",
-      "network": "haknet",
-      "logo": "https://i.imgur.com/ZOuTP9V.png",
-      "image": "battlecl0ud/sqlmap:latest",
-      "ports": [],
-      "env": [
-        {
-          "name": "USER_INPUT",
-          "label": "Arguments"
-        }
-      ]
-    }
-  ],
-  [
-    {
-      "type": "container",
-      "name": "msfrpc",
-      "title": "Metasploit Armitage",
-      "description": "Offensive tooling",
-      "note": "Deploys the Metasploit framework RPC Daemon using Kali a base, and launches Armitage team server. Make sure to run the PostgresSQL backend server from templates first.",
-      "categories": [
-        "C2"
-      ],
-      "platform": "linux",
-      "network": "haknet",
-      "logo": "https://i.imgur.com/SRKQlbq.png",
-      "image": "msfrpcd:latest",
-      "ports": [
-        "55553/tcp",
-        "55555/tcp",
-        "443/tcp"
-      ],
-      "env": [
-        {
-          "name": "POSTGRES_DB_HOST",
-          "label": "POSTRESGSQL database host",
-          "type": "container"
-        },
-        {
-          "name": "POSTGRES_DB_PASSWORD",
-          "label": "Database password",
-          "set": "s3cr3t"
-        }
-      ]
-    },
-    {
-      "type": "container",
-      "name": "msfdb",
-      "note": "<h1>Make sure to name your container msfdb",
-      "title": "PostgreSQL",
-      "description": "Preconfigured for Metasploit",
-      "categories": [
-        "database"
-      ],
-      "platform": "linux",
-      "logo": "https://i.imgur.com/3lVNxIK.png",
-      "network": "haknet",
-      "image": "postgres:latest",
-      "env": [
-        {
-          "name": "POSTGRES_USER",
-          "label": "Superuser",
-          "set": "postgres"
-        },
-        {
-          "name": "POSTGRES_PASSWORD",
-          "label": "Superuser password, default for Metasploit Preconfigured",
-          "set": "s3cr3t"
-        }
-      ],
-      "ports": [
-        "5432"
-      ],
-      "volumes": [
-        "/var/lib/postgresql/data"
-      ]
-    }
-  ],
-  [
-    {
-      "type": "container",
-      "name": "trevorc2_server",
-      "title": "trevorc2_server",
-      "description": "TrevorC2 is a legitimate website (browsable) that tunnels client/server communications for covert command execution",
-      "note": "Auto generated Portainer template <br>Source openssl ca-certificates py3-requests py3-pip build-dependencies python3-dev build-base wget",
-      "categories": [
-        "offensive"
-      ],
-      "platform": "linux",
-      "network": "haknet",
-      "logo": "https://i.imgur.com/ZOuTP9V.png",
-      "image": "battlecl0ud/trevorc2_server:latest",
-      "ports": [
-        "80/tcp",
-        "443/tcp"
-      ],
-      "env": [
-        {
-          "name": "USER_INPUT",
-          "label": "Arguments"
-        }
-      ]
-    }
-  ],
-  [
-    {
-      "type": "container",
-      "name": "ctfr",
-      "title": "ctfr",
-      "description": "Abusing Certificate Transparency logs for getting HTTPS websites subdomains",
-      "note": "Auto generated Portainer template <br>Source https://github.com/UnaPibaGeek/ctfr.git",
-      "categories": [
-        "offensive"
-      ],
-      "platform": "linux",
-      "network": "haknet",
-      "logo": "https://i.imgur.com/ZOuTP9V.png",
-      "image": "ctfr:latest",
-      "ports": [],
-      "env": [
-        {
-          "name": "USER_INPUT",
-          "label": "Arguments"
-        }
-      ]
-    }
-  ]
+  {
+    "type": "container",
+    "name": "meg",
+    "title": "meg",
+    "description": "",
+    "note": "Auto generated Portainer template <br>Source https://github.com/tomnomnom/meg",
+    "categories": [
+      "offensive"
+    ],
+    "platform": "linux",
+    "network": "haknet",
+    "logo": "https://i.imgur.com/ZOuTP9V.png",
+    "image": "battlecl0ud/meg:latest",
+    "ports": [],
+    "env": [
+      {
+        "name": "USER_INPUT",
+        "label": "Arguments"
+      }
+    ]
+  },
+  {
+    "type": "container",
+    "name": "sqlmap",
+    "title": "sqlmap",
+    "description": "Automatic SQL injection and database takeover tool",
+    "note": "Auto generated Portainer template <br>Source https://github.com/sqlmapproject/sqlmap.git",
+    "categories": [
+      "offensive"
+    ],
+    "platform": "linux",
+    "network": "haknet",
+    "logo": "https://i.imgur.com/ZOuTP9V.png",
+    "image": "battlecl0ud/sqlmap:latest",
+    "ports": [],
+    "env": [
+      {
+        "name": "USER_INPUT",
+        "label": "Arguments"
+      }
+    ]
+  },
+  {
+    "type": "container",
+    "name": "msfrpc",
+    "title": "Metasploit Armitage",
+    "description": "Offensive tooling",
+    "note": "Deploys the Metasploit framework RPC Daemon using Kali a base, and launches Armitage team server. Make sure to run the PostgresSQL backend server from templates first.",
+    "categories": [
+      "C2"
+    ],
+    "platform": "linux",
+    "network": "haknet",
+    "logo": "https://i.imgur.com/SRKQlbq.png",
+    "image": "msfrpcd:latest",
+    "ports": [
+      "55553/tcp",
+      "55555/tcp",
+      "443/tcp"
+    ],
+    "env": [
+      {
+        "name": "POSTGRES_DB_HOST",
+        "label": "POSTRESGSQL database host",
+        "type": "container"
+      },
+      {
+        "name": "POSTGRES_DB_PASSWORD",
+        "label": "Database password",
+        "set": "s3cr3t"
+      }
+    ]
+  },
+  {
+    "type": "container",
+    "name": "msfdb",
+    "note": "<h1>Make sure to name your container msfdb",
+    "title": "PostgreSQL",
+    "description": "Preconfigured for Metasploit",
+    "categories": [
+      "database"
+    ],
+    "platform": "linux",
+    "logo": "https://i.imgur.com/3lVNxIK.png",
+    "network": "haknet",
+    "image": "postgres:latest",
+    "env": [
+      {
+        "name": "POSTGRES_USER",
+        "label": "Superuser",
+        "set": "postgres"
+      },
+      {
+        "name": "POSTGRES_PASSWORD",
+        "label": "Superuser password, default for Metasploit Preconfigured",
+        "set": "s3cr3t"
+      }
+    ],
+    "ports": [
+      "5432"
+    ],
+    "volumes": [
+      "/var/lib/postgresql/data"
+    ]
+  },
+  {
+    "type": "container",
+    "name": "trevorc2_server",
+    "title": "trevorc2_server",
+    "description": "TrevorC2 is a legitimate website (browsable) that tunnels client/server communications for covert command execution",
+    "note": "Auto generated Portainer template <br>Source openssl ca-certificates py3-requests py3-pip build-dependencies python3-dev build-base wget",
+    "categories": [
+      "offensive"
+    ],
+    "platform": "linux",
+    "network": "haknet",
+    "logo": "https://i.imgur.com/ZOuTP9V.png",
+    "image": "battlecl0ud/trevorc2_server:latest",
+    "ports": [
+      "80/tcp",
+      "443/tcp"
+    ],
+    "env": [
+      {
+        "name": "USER_INPUT",
+        "label": "Arguments"
+      }
+    ]
+  },
+  {
+    "type": "container",
+    "name": "ctfr",
+    "title": "ctfr",
+    "description": "Abusing Certificate Transparency logs for getting HTTPS websites subdomains",
+    "note": "Auto generated Portainer template <br>Source https://github.com/UnaPibaGeek/ctfr.git",
+    "categories": [
+      "offensive"
+    ],
+    "platform": "linux",
+    "network": "haknet",
+    "logo": "https://i.imgur.com/ZOuTP9V.png",
+    "image": "ctfr:latest",
+    "ports": [],
+    "env": [
+      {
+        "name": "USER_INPUT",
+        "label": "Arguments"
+      }
+    ]
+  }
 ]
